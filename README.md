@@ -1,8 +1,10 @@
 # FTP-Sniffer
-
+ 
+ Linux下，基于内核模块的FTP密码嗅探器。
+ 
  1. nfsniff.c窃取ftp服务的用户名和密码；
- 2. 修改后的nfsniff_Result.c **增加了对HTTP数据包的处理**，使得我们在登录如mail.ustc.edu.cn等使用明文传输username和password的网站时，可以捕获到username和password；
- 3. getpass.c发送特殊构造的icmp包并取得回复。
+ 2. getpass.c发送特殊构造的icmp包并取得回复。
+ 3. 修改后的nfsniff_Result.c **增加了对HTTP数据包的处理**，使得我们在登录如mail.ustc.edu.cn等使用明文传输username和password的**网站**时，可以捕获到username和password；
 
 **执行过程如下**：
 
