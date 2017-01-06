@@ -9,7 +9,8 @@
 ---
  修改后，只需一台虚拟机，可以在浏览器上登录服务时窃取密码，
  主要是在nfsniff_Result.c **增加了对HTTP数据包的处理**，在我们登录如mail.ustc.edu.cn等使用明文传输username和password的**网站**时，可以捕获到username和password；
-
+ 原理方面看这里：https://twilighce.github.io/2017/01/01/My-Netfilter/#more
+ 
 **执行过程如下**：
 
 
