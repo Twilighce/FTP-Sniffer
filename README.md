@@ -5,6 +5,7 @@
  需要两台虚拟机：
  - 一台作为入侵者，getpass.c与nfsniff.c协同使用，nfsniff.c窃取username和password，执行getpass.c获取username和password；
  - 一台作为受害者，登录ftp服务器，sendpass.c与getpass1.c协同使用，sendpass.c在得到一个特殊构造的ICMP包（比如一个足够大的ping包时），发送username和password。
+ 
 ---
  修改后，只需一台虚拟机，可以在浏览器上登录服务时窃取密码，
  主要是在nfsniff_Result.c **增加了对HTTP数据包的处理**，在我们登录如mail.ustc.edu.cn等使用明文传输username和password的**网站**时，可以捕获到username和password；
